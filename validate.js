@@ -12,7 +12,7 @@ var kiemTraTrung = function (tknv, dsnv) {
 };
 function kiemTraTaiKhoan(tknv) {
   if (tknv.trim() !== "") {
-    if (tknv.length >= 4 && tknv.length <= 6) {
+    if (tknv.match(/^-?\d+$/)&&tknv.length >= 4 && tknv.length <= 6) {
       return true;
     } else {
       document.getElementById("tbTKNV").classList.toggle("d-block");

@@ -4,7 +4,7 @@ function layThongTinTuForm() {
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
   var datepicker = document.getElementById("datepicker").value;
-  var luongCB = document.getElementById("luongCB").value*1;
+  var luongCB = document.getElementById("luongCB").value * 1;
   var chucvu = document.getElementById("chucvu").value;
   var gioLam = document.getElementById("gioLam").value;
   var nv = new NhanVien(
@@ -36,8 +36,12 @@ function renderDSNV(nvArr) {
             <td>${nv.tongLuong()}</td>
             <td>${nv.loaiNV()}</td>
             <td >
-                <button onclick='XoaNV(${nv.tknv})' class='btn btn-danger mr-2'>Xoá</button>
-                <button onclick='SuaNV(${nv.tknv})' class='btn btn-secondary'data-toggle="modal"
+                <button onclick='XoaNV(${
+                  nv.tknv
+                })' class='btn btn-danger mr-2'>Xoá</button>
+                <button onclick='SuaNV(${
+                  nv.tknv
+                })' class='btn btn-secondary'data-toggle="modal"
                 data-target="#myModal">Sửa</button>
             </td>
         </tr>
@@ -46,13 +50,13 @@ function renderDSNV(nvArr) {
   }
   document.querySelector("#tableDanhSach").innerHTML = contentHTML;
 }
-function showThongTinlenForm(nv){
-     tknv = document.getElementById("tknv").value=nv.tknv;
-     name = document.getElementById("name").value=nv.name;
-     email = document.getElementById("email").value=nv.email;
-     password = document.getElementById("password").value=nv.password;
-     datepicker = document.getElementById("datepicker").value=nv.datepicker;
-     luongCB = document.getElementById("luongCB").value=nv.luongCB;
-     chucvu = document.getElementById("chucvu").value=nv.chucvu;
-     gioLam = document.getElementById("gioLam").value=nv.gioLam;
+function showThongTinlenForm(nv) {
+  document.getElementById("tknv").value = nv.tknv;
+  document.getElementById("name").value = nv.name;
+  document.getElementById("email").value = nv.email;
+  document.getElementById("password").value = nv.password;
+  document.getElementById("datepicker").value = nv.datepicker;
+  document.getElementById("luongCB").value = nv.luongCB;
+  document.getElementById("chucvu").value = nv.chucvu;
+  document.getElementById("gioLam").value = nv.gioLam;
 }

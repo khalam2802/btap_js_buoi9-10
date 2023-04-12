@@ -73,6 +73,7 @@ function SuaNV(tknv){
     document.getElementById("tknv").disabled=true;
 
    showThongTinlenForm(dsnv[viTri]);
+
     renderDSNV(dsnv);
 }
 
@@ -91,4 +92,13 @@ function capNhatNV(){
         dsnv[viTri]=nv;
     }
     renderDSNV(dsnv)
+}
+function locNV(){
+    var layValue=document.getElementById("searchName").value;
+    var locNV=dsnv.filter(function(search){
+        return search.loaiNV()===layValue && search.chucvu==="Nhân viên";
+        
+    })
+    renderDSNV(locNV);
+
 }

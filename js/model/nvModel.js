@@ -23,13 +23,13 @@ function NhanVien(_tknv, _name, _email, _password, _datepicker, _luongCB, _chucv
     },
     this.loaiNV = function(){
         if((this.gioLam)*1 >=192){
-            return "xuất xắc"
+            return "Xuất xắc"
         }
         else if ((this.gioLam)>=176){
-            return "giỏi"
+            return "Giỏi"
         }
         else if ((this.gioLam)>=160){
-            return "khá"}
+            return "Khá"}
 
         else{
             return  "trung bình"
